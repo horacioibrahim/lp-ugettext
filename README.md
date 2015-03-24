@@ -1,5 +1,5 @@
 lp-ugettext
-===============
+============
 
 lp-ugettext provides the language from browser via javascript. It's based in the
 piece of code of the Hamid posted in StackOverflow. It's was polymered!
