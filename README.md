@@ -16,8 +16,11 @@ Usage
         <lp-ugettext></lp-ugettext>
 
         <script>
-            var ug = document.querySelector('lp-ugettext');
-            console.log(s.language);
+          window.addEventListener('polymer-ready', function(e) {
+            var uget = document.querySelector('lp-ugettext');
+            var mylanguage = document.querySelector('#mylanguage');
+            mylanguage.innerHTML = uget.language;
+          });
         </script>
 </body>
 ```
