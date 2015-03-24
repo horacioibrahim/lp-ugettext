@@ -10,7 +10,7 @@ Usage
 
 ```
 <body unresolved>
-                
+
 
         <!-- end elements -->
         <lp-ugettext></lp-ugettext>
@@ -18,8 +18,6 @@ Usage
         <script>
             var ug = document.querySelector('lp-ugettext');
             console.log(s.language);
+        </script>
 </body>
 ```
-
-
-
