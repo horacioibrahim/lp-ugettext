@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>lp-ugettext Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="lp-ugettext.html">
+
+</head>
+<body unresolved>
+		<div id="mylanguage"></div>
+
+      <lp-ugettext></lp-ugettext>
+
+      <script>
+      var uget = document.querySelector('lp-ugettext');
+      var mylanguage = document.querySelector('#mylanguage');
+      mylanguage.innerHTML = uget.language;
+      </script>
+
+</body>
+</html>

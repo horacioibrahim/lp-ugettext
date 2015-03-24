@@ -1,0 +1,61 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<!--
+lp-ugettext provides the language from browser via javascript
+
+##### Example
+      <lp-ugettext></lp-ugettext>
+      <script>
+        var uget = document.querySelector('lp-ugettext');
+        console.log("My language is: " + uget.language);
+
+@element lp-ugettext
+@blurb Element providing the language from browser via javascript
+@status beta
+@homepage http://github.com/horacioibrahim/lp-ugettext
+-->
+<polymer-element name="lp-ugettext" attributes="">
+  <template>
+  </template>
+  <script>
+    (function () {
+      Polymer({
+        // define element prototype here
+        publish: {
+          language: 'en-US',
+        },
+        ready: function () {
+          this.language = this.getLanguage();
+        },
+        getLanguage: function () {
+        /**
+        * This code is copy/paste from http://stackoverflow.com/a/29106129/2283488
+        * Thanks Hamid!
+        *
+        */
+          var nav = window.navigator,
+          browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+          i,
+          language;
+          // support for HTML 5.1 "navigator.languages"
+          if (Array.isArray(nav.languages)) {
+            for (i = 0; i < nav.languages.length; i++) {
+              language = nav.languages[i];
+              if (language && language.length) {
+                return language;
+              }
+            }
+          }
+          // support for other well known properties in browsers
+          for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+            language = nav[browserLanguagePropertyKeys[i]];
+            if (language && language.length) {
+              return language;
+            }
+          }
+          return null;
+        }
+      });
+    })();
+  </script>
+</polymer-element>

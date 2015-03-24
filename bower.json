@@ -1,0 +1,27 @@
+{
+  "name": "lp-ugettext",
+  "version": "0.0.1",
+  "authors": [
+    "Horacio Ibrahim <horacioibrahim@gmail.com>"
+  ],
+  "description": "lp-ugettext provides the language from browser via javascript",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "lp-ugettext"
+  ],
+  "main": "lp-ugettext.html",
+  "license": "MIT",
+  "homepage": "https://github.com/horacioibrahim/lp-ugettext/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "*"
+  }
+}
