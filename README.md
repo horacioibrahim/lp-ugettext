@@ -18,8 +18,7 @@ Usage
         <script>
           window.addEventListener('polymer-ready', function(e) {
             var uget = document.querySelector('lp-ugettext');
-            var mylanguage = document.querySelector('#mylanguage');
-            mylanguage.innerHTML = uget.language;
+            console.log("mylanguage" + uget.language);
           });
         </script>
 </body>
